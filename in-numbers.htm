@@ -485,43 +485,44 @@
 
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <script type="text/javascript">
-    google.charts.load('current', {packages: ['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Category', 'Housing', 'Education', 'Environmental Crises', { role: 'annotation' }],
-            ['Strategic', 2332098, 10524471, 900000, 'Strategic'],
-            ['Intermediate', 100287, 3104800, 0, 'Intermediate'],
-            ['Discretionary / Emergency', 4589117, 0, 0, 'Emergency'],
-            ['Hospice Care', 629632, 0, 0, 'Hospice'],
-            ['Total', 5218749, 13629271, 900000, 'Total']
-        ]);
+google.charts.load('current', {packages: ['corechart']});
+google.charts.setOnLoadCallback(drawChart);
 
-        var view = new google.visualization.DataView(data);
-        view.setColumns([0, 1, 2, 3]);
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ['Category', 'Housing', 'Education', 'Environmental Crises', 'Other', { role: 'annotation' }],
+        ['Strategic', 2332098, 10524471, 900000, 0, 'Strategic'],
+        ['Intermediate', 100287, 3104800, 0, 0, 'Intermediate'],
+        ['Discretionary / Emergency / Hospice Care', 0, 0, 0, 5218749, 'Other'],
+        ['Total', 2432385, 13629271, 900000, 5218749, 'Total']
+    ]);
 
-        var options = {
-               // title: 'Granting Distribution by Category',
-                legend: { position: 'top', alignment: 'center' }, // Center the legend
-                hAxis: { 
-                    title: 'Category', 
-                    textStyle: { fontSize: 12, bold: true, color: '#333' }, 
-                    slantedText: false, // Keep labels horizontal
-                },
-                vAxis: { title: 'Amount (£)' },
-                bars: 'vertical',
-                isStacked: true,
-                width: '100%',
-                height: 500,
-                chartArea: { left: '10%', width: '80%', top: 50 }, // Adjust top spacing for centered text,
-                colors: ['#673ab7', '#2196f3','#ffc107']
-                
-            };
-        var chart = new google.visualization.ColumnChart(document.getElementById('analysis-of-grants-by-year'));
-        chart.draw(view, options);
-    }
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1, 2, 3, 4]);
+
+    var options = {
+        legend: { position: 'top', alignment: 'center' },
+        hAxis: { 
+            title: 'Category', 
+            textStyle: { fontSize: 12, bold: true, color: '#333' },
+            slantedText: false,
+        },
+        vAxis: { title: 'Amount (£)' },
+        bars: 'vertical',
+        isStacked: true,
+        width: '100%',
+        height: 600,
+        chartArea: { left: '10%', width: '80%', top: 50 },
+        colors: ['#673ab7', '#2196f3', '#ffc107',  '#f06292']  // Note: You have 4 series but only 3 colors; consider adding a fourth if needed.
+    };
+
+    var chart = new google.visualization.ColumnChart(document.getElementById('analysis-of-grants-by-year'));
+    chart.draw(view, options);
+}
+
 </script>
 
 </head>
@@ -754,7 +755,7 @@
 
 
 
-            <h1 class="medium centered">Analysis of grants by year:</h1>
+            <h1 class="medium centered">Analysis of total granting across strategic themes</h1>
 
 
 
@@ -780,7 +781,7 @@
 
 
 
-                <div id="analysis-of-grants-by-year" style="width: 100%; min-height: 500px;"></div>
+                <div id="analysis-of-grants-by-year" style="width: 100%; min-height: 600px;"></div>
 
 
 
@@ -794,50 +795,56 @@
                     }
                   </style>
 
-                  <table>
-                    <tr class="head">
-                        <th>Programme area</th>
-                        <th>Housing (£)</th>
-                        <th>Education (£)</th>
-                        <th>Environmental Crises (£)</th>
-                        <th>Total (£)</th>
-                    </tr>
-                    <tr>
-                        <td>Strategic</td>
-                        <td>2,332,098</td>
-                        <td>10,524,471</td>
-                        <td>900,000</td>
-                        <td>13,756,569</td>
-                    </tr>
-                    <tr>
-                        <td>Intermediate</td>
-                        <td>100,287</td>
-                        <td>3,104,800</td>
-                        <td>-</td>
-                        <td>3,205,087</td>
-                    </tr>
-                    <tr>
-                        <td>Discretionary / Emergency</td>
-                        <td>4,589,117</td>
-                        <td></td>
-                        <td></td>
-                        <td>4,589,117</td>
-                    </tr>
-                    <tr>
-                        <td>Hospice Care</td>
-                        <td>629,632</td>
-                        <td></td>
-                        <td></td>
-                        <td>629,632</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Total</strong></td>
-                        <td><strong>5,218,749</strong></td>
-                        <td><strong>13,629,271</strong></td>
-                        <td><strong>900,000</strong></td>
-                        <td><strong>22,180,405</strong></td>
-                    </tr>
-                </table>
+<table>
+  <tr class="head">
+      <th>Category</th>
+      <th>Other</th>
+      <th>Housing</th>
+      <th>Education</th>
+      <th>Environmental Crises</th>
+      <th>Total</th>
+  </tr>
+  <tr>
+      <td>Total granting for all sectors - Strategic</td>
+      <td></td>
+      <td>£2,332,098</td>
+      <td>£10,524,471</td>
+      <td>£900,000</td>
+      <td>£13,756,569</td>
+  </tr>
+  <tr>
+      <td>Total granting for all sectors - Intermediate</td>
+      <td></td>
+      <td>£100,287</td>
+      <td>£3,104,800</td>
+      <td></td>
+      <td>£3,205,087</td>
+  </tr>
+  <tr>
+      <td>Discretionary / Emergency</td>
+      <td>£4,589,117</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>£4,589,117</td>
+  </tr>
+  <tr>
+      <td>Hospice Care</td>
+      <td>£629,632</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>£629,632</td>
+  </tr>
+  <tr>
+      <td>Total</td>
+      <td>£5,218,749</td>
+      <td>£2,432,385</td>
+      <td>£13,629,271</td>
+      <td>£900,000</td>
+      <td>£22,180,405</td>
+  </tr>
+</table>
             
 
 
@@ -909,27 +916,23 @@
 
             <script type="text/javascript">
               // Load the 'corechart' package.
-              google.charts.load('current', {packages: ['corechart']});
-          
+              google.charts.load('current', { packages: ['corechart'] });
+            
               // Callback that runs when Google Charts is loaded.
               google.charts.setOnLoadCallback(drawChart);
-          
+            
               function drawChart() {
-                // 1. Prepare the data
+                // 1. Prepare the data (removed annotation column)
                 var data = google.visualization.arrayToDataTable([
-                  // Header row: the first column is the "Theme" label, 
-                  // the next columns are numeric values for Granting and Social Investments, 
-                  // plus a role: "annotation" column for better labeling if needed.
-                  ['Theme', 'Granting* (in £)', 'Social Investments (in £)', { role: 'annotation' }],
-                  ['Housing', 2432385, 3218056, 'Housing'],
-                  ['Education', 13629271, 250000, 'Education'],
-                  ['Environmental Crises', 900000, 900000, 'Env. Crises'],
-                  ['Total', 16961656, 4368056, 'Total']
+                  ['Theme', 'Granting* (in £)', 'Social Investments (in £)'],
+                  ['Housing', 2432385, 3218056],
+                  ['Education', 13629271, 250000],
+                  ['Environmental Crises', 900000, 900000],
+                  ['Total', 16961656, 4368056]
                 ]);
-          
+            
                 // 2. Set up chart options
                 var options = {
-                 // title: 'Analysis of Spectrum of Capital vs Strategic Themes',
                   vAxis: {
                     title: '£ (Millions)',
                     minValue: 0
@@ -944,18 +947,18 @@
                   height: 500,
                   colors: ['#673ab7', '#2196f3']
                 };
-          
+            
                 // 3. Draw the chart inside a DIV
                 var chart = new google.visualization.ColumnChart(document.getElementById('capital-strategic-themes'));
                 chart.draw(data, options);
-          
+            
                 // 4. Make chart responsive on window resize
-                window.addEventListener('resize', function() {
+                window.addEventListener('resize', function () {
                   chart.draw(data, options);
                 });
               }
             </script>
-
+            
             <h1 class="medium centered">Analysis of Spectrum of Capital vs Strategic Themes:
             </h1>
 
@@ -1110,18 +1113,17 @@
 
 
 
-            <h1 class="medium centered">Grant trend since inception</h1>
-
+            <h1 class="medium centered">Granting trend since inception</h1>
 
             <script type="text/javascript">
               // Load Google Charts
-              google.charts.load('current', {packages: ['corechart']});
+              google.charts.load('current', { packages: ['corechart'] });
               google.charts.setOnLoadCallback(drawChart);
-      
+            
               function drawChart() {
                   // Define data
                   var data = google.visualization.arrayToDataTable([
-                      ['Year', 'Cumulative Total (£)'],
+                      ['Financial Year', 'Cumulative Total (£)'],
                       ['2019', 2482735],
                       ['2020', 8041202],
                       ['2021', 13827393],
@@ -1129,29 +1131,32 @@
                       ['2023', 16280406],
                       ['2024', 22180406]
                   ]);
-      
+            
                   // Chart options
                   var options = {
-                      //title: 'Trending of Granting for Monday Charitable Trust (2019 - 2024)',
-                      curveType: 'function', // Makes the line smooth
+                      // title: 'Trending of Granting for Monday Charitable Trust (2019 - 2024)',
                       legend: { position: 'bottom' },
                       vAxis: { title: '£ Millions', minValue: 0 },
-                      hAxis: { title: 'Year' },
+                      hAxis: { title: 'Financial Year' }, // Updated x-axis title
                       chartArea: { left: '10%', width: '80%', top: 50 },
                       width: '100%',
-                      height: 500
+                      height: 500,
+                      series: {
+                          0: { pointShape: 'square', pointSize: 7 } // Adds square markers to each point
+                      }
                   };
-      
+            
                   // Render chart
                   var chart = new google.visualization.LineChart(document.getElementById('grant-trend'));
                   chart.draw(data, options);
-      
+            
                   // Resize dynamically on window resize
                   window.addEventListener('resize', function() {
                       chart.draw(data, options);
                   });
               }
-          </script>
+            </script>
+            
 
 
 
@@ -1176,11 +1181,11 @@
              
 
 
-                <div id="grant-trend" style="width: 100%; min-height: 500px;"></div>
+                <div id="grant-trend" style="width: 100%; min-height: 600px;"></div>
 
 
 
-                <div class="table">
+                <div class="table" style="margin-top: -40px;">
 
 
                   <table>
