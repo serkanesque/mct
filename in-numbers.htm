@@ -493,11 +493,11 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
-        ['Category', 'Housing', 'Education', 'Environmental Crises', 'Other', { role: 'annotation' }],
-        ['Strategic', 2332098, 10524471, 900000, 0, 'Strategic'],
-        ['Intermediate', 100287, 3104800, 0, 0, 'Intermediate'],
-        ['Discretionary / Emergency / Hospice Care', 0, 0, 0, 5218749, 'Other'],
-        ['Total', 2432385, 13629271, 900000, 5218749, 'Total']
+    ['Category', 'Housing (£M)', 'Education (£M)', 'Environmental Crises (£M)', 'Other (£M)'],
+        ['Strategic', 2.33, 10.52, 0.90, 0],  // Converted to millions
+        ['Intermediate', 0.10, 3.10, 0, 0],   // Converted to millions
+        ['Discretionary / Emergency / Hospice Care', 0, 0, 0, 5.22], // Converted to millions
+        ['Total', 2.43, 13.63, 0.90, 5.22]  // Converted to millions
     ]);
 
     var view = new google.visualization.DataView(data);
@@ -507,15 +507,21 @@ function drawChart() {
         legend: { position: 'top', alignment: 'center' },
         hAxis: { 
             title: 'Category', 
-            textStyle: { fontSize: 12, bold: true, color: '#333' },
+            titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' },
             slantedText: false,
         },
-        vAxis: { title: 'Amount (£)' },
+
+        vAxis: { 
+          title: '£ (Millions)',
+    titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' },
+    format: '0.0' 
+},
         bars: 'vertical',
         isStacked: true,
         width: '100%',
         height: 600,
-        chartArea: { left: '10%', width: '80%', top: 50 },
+        chartArea: { left: '10%', width: '80%', top: 50, bottom: 100 },
+
         colors: ['#673ab7', '#2196f3', '#ffc107',  '#f06292']  // Note: You have 4 series but only 3 colors; consider adding a fourth if needed.
     };
 
@@ -793,6 +799,13 @@ function drawChart() {
                       text-align: left;
                   
                     }
+                    tr th:not(:first-child), 
+                    tr td:not(:first-child) {
+    text-align: right;
+}
+.table {
+    margin-top: 40px;
+}
                   </style>
 
 <table>
@@ -836,7 +849,7 @@ function drawChart() {
       <td></td>
       <td>£629,632</td>
   </tr>
-  <tr>
+  <tr class="total">
       <td>Total</td>
       <td>£5,218,749</td>
       <td>£2,432,385</td>
@@ -903,7 +916,208 @@ function drawChart() {
         </div>
 
 
+        <div data-tab="tab-1" class="tab-1">
 
+
+
+          <!--
+
+    <p class="numbers-intro">We have made grants during 2019/20 supporting hospices, charities supporting young people with the provision of life skills, assistance to help disabled with independent living, support of people transitioning from sleeping rough and a provision for hot meals for homeless people, air ambulance funds, service personnel and the disabled. </p><p>We continue to monitor the performance of a range of existing medium and long-term projects across the spectrum of our grant making activities, as well as making a number of individual grants each year. All our projects are considered to meet the requirement for public benefit.</p>
+
+  -->
+
+          <div class="impact-panel">
+
+
+
+            <h1 class="medium centered">Social investments by year by strategic theme</h1>
+
+
+
+
+
+
+
+            <div class="tabs">
+
+
+
+
+
+
+
+
+
+              <div id='tab-1'>
+                <script type="text/javascript">
+                  // Load Google Charts
+                  google.charts.load('current', { packages: ['corechart'] });
+                  google.charts.setOnLoadCallback(drawChart);
+                  function drawChart() {
+      // Define data
+      var data = google.visualization.arrayToDataTable([
+    ['Year Ending 31 March', 'Housing (£M)', 'Education (£M)', 'Environmental Crises (£M)'],
+    ['2020', 1.82, 0, 0],   // Converted to millions
+    ['2021', 0.13, 0, 0],   // Converted to millions
+    ['2022', 0.94, 0, 0],   // Converted to millions
+    ['2023', 0.13, 0.25, 0], // Converted to millions
+    ['2024', 0.19, 0, 0.90], // Converted to millions
+    ['Total', 3.22, 0.25, 0.90] // Converted to millions
+]);
+
+      // Chart options
+      var options = {
+          //title: 'Social Investments by Year by Strategic Theme',
+          vAxis: {   title: '£ (Millions)', minValue: 0,
+          titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' },
+           format: '0.0'
+           },
+          hAxis: { title: 'Year Ending 31 March',
+          titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333', marginTop: -10 }       
+           },
+          chartArea: { left: '10%', width: '80%', top: 50, bottom: 100 },
+          width: '100%',
+          height: 500,
+          isStacked: true, // Stacked per year, but "Total" is separate
+          legend: { position: 'top', alignment: 'center' },
+          
+          colors: ['#673ab7', '#2196f3', '#ff9800'] // Purple, Blue, and Orange for themes
+      };
+                
+                      // Render chart
+                      var chart = new google.visualization.ColumnChart(document.getElementById('social-investments'));
+                      chart.draw(data, options);
+                
+                      // Resize dynamically on window resize
+                      window.addEventListener('resize', function () {
+                          chart.draw(data, options);
+                      });
+                  }
+                </script>
+                
+                <!-- Div to render the chart -->
+                <div id="social-investments" style="width: 100%; height: 500px;"></div>
+                
+
+
+
+
+
+
+              
+
+
+
+                <div class="table">
+                  <style>
+                    table th {
+                      padding: 12px;
+                      font-size: 14px;
+                      text-align: left;
+                  
+                    }
+                  </style>
+
+<table>
+  <tr class="head">
+      <th>Year Ending 31 March</th>
+      <th>Housing (£)</th>
+      <th>Education (£)</th>
+      <th>Environmental Crises (£)</th>
+  </tr>
+  <tr>
+      <td>2020</td>
+      <td>£1,821,056</td>
+      <td>£0</td>
+      <td>£0</td>
+  </tr>
+  <tr>
+      <td>2021</td>
+      <td>£127,500</td>
+      <td>£0</td>
+      <td>£0</td>
+  </tr>
+  <tr>
+      <td>2022</td>
+      <td>£942,250</td>
+      <td>£0</td>
+      <td>£0</td>
+  </tr>
+  <tr>
+      <td>2023</td>
+      <td>£132,750</td>
+      <td>£250,000</td>
+      <td>£0</td>
+  </tr>
+  <tr>
+      <td>2024</td>
+      <td>£193,500</td>
+      <td>£0</td>
+      <td>£900,000</td>
+  </tr>
+  <tr class="total">
+      <td>Total</td>
+      <td>£3,218,056</td>
+      <td>£250,000</td>
+      <td>£900,000</td>
+  </tr>
+</table>
+            
+
+
+
+
+
+
+
+                </div>
+
+
+
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+        </div>
 
 
 
@@ -924,21 +1138,24 @@ function drawChart() {
               function drawChart() {
                 // 1. Prepare the data (removed annotation column)
                 var data = google.visualization.arrayToDataTable([
-                  ['Theme', 'Granting* (in £)', 'Social Investments (in £)'],
-                  ['Housing', 2432385, 3218056],
-                  ['Education', 13629271, 250000],
-                  ['Environmental Crises', 900000, 900000],
-                  ['Total', 16961656, 4368056]
-                ]);
+    ['Theme', 'Granting* (£M)', 'Social Investments (£M)'],
+    ['Housing', 2.43, 3.22],       // Converted to millions
+    ['Education', 13.63, 0.25],    // Converted to millions
+    ['Environmental Crises', 0.90, 0.90], // Converted to millions
+    ['Total', 16.96, 4.37]        // Converted to millions
+]);
             
                 // 2. Set up chart options
                 var options = {
                   vAxis: {
                     title: '£ (Millions)',
-                    minValue: 0
+                    minValue: 0,
+                    titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' },
+                     format: '0.0'
                   },
                   hAxis: {
-                    title: 'Strategic Theme'
+                    title: 'Strategic Theme',
+                    titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' }
                   },
                   legend: { position: 'top', alignment: 'center' },
                   isStacked: true,
@@ -1027,7 +1244,11 @@ function drawChart() {
                 </table>
 
                 <p style="font-size: 15px; margin-top: 24px;"><strong>*</strong> The figures in the table omit the grants to Phyllis Tuckwell Hospice Care (£630k), which fell outside of this strategic categorisation.</p>
-
+<style>
+  tr.total td {
+    font-weight: 700;
+  }
+</style>
 
 
 
@@ -1123,21 +1344,26 @@ function drawChart() {
               function drawChart() {
                   // Define data
                   var data = google.visualization.arrayToDataTable([
-                      ['Financial Year', 'Cumulative Total (£)'],
-                      ['2019', 2482735],
-                      ['2020', 8041202],
-                      ['2021', 13827393],
-                      ['2022', 15779147],
-                      ['2023', 16280406],
-                      ['2024', 22180406]
-                  ]);
+    ['Financial Year', 'Cumulative Total (£M)'],
+    ['2019', 2.48],  // Converted to millions
+    ['2020', 8.04],  // Converted to millions
+    ['2021', 13.83], // Converted to millions
+    ['2022', 15.78], // Converted to millions
+    ['2023', 16.28], // Converted to millions
+    ['2024', 22.18]  // Converted to millions
+]);
             
                   // Chart options
                   var options = {
                       // title: 'Trending of Granting for Monday Charitable Trust (2019 - 2024)',
                       legend: { position: 'bottom' },
-                      vAxis: { title: '£ Millions', minValue: 0 },
-                      hAxis: { title: 'Financial Year' }, // Updated x-axis title
+                      vAxis: { title: '£ Millions', minValue: 0,
+                      titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' },
+                       format: '0.0'
+                       },
+                      hAxis: { title: 'Financial Year',
+                      titleTextStyle: { fontSize: 14, bold: true, italic: true, color: '#333' }
+                       }, // Updated x-axis title
                       chartArea: { left: '10%', width: '80%', top: 50 },
                       width: '100%',
                       height: 500,
