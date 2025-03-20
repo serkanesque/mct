@@ -342,7 +342,26 @@ background-color: #d1c4e9a6;
     background-color: #e8e8e8 !important;
 }
 	}
+	.theme {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+        /* Colors for each theme */
+        .housing { background-color: #663bb2; } /* Green */
+        .education { background-color: #2b95ed; } /* Blue */
+        .environment { background-color:#f57c00; } /* Orange */
 }
+
+td:last-child, th:last-child {
+            text-align: right !important;
+        }
+		td:nth-child(2) {
+          width: 200px;
+        }
 	  </style>
 	  <script>
 		function showTab(year) {
@@ -388,58 +407,191 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Construction Youth Trust</td><td>£900,000</td></tr>
-		  <tr><td>Mental Health Foundation</td><td>£300,000</td></tr>
-		  <tr><td>Nehemiah Project</td><td>£150,000</td></tr>
-		  <tr><td>Khulisa</td><td>£450,000</td></tr>
-		  <tr><td>The Access Project</td><td>£525,000</td></tr>
-		  <tr><td>Royal Spring Board</td><td>£300,000</td></tr>
-		  <tr><td>Into Uni</td><td>£900,000</td></tr>
-		  <tr><td>Client Earth</td><td>£900,000</td></tr>
-		  <tr><td>The Prince's Trust</td><td>£900,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£5,325,000</th></tr>
-		</table>
-		
-		<h3>Intermediate grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>St Catharine's College</td><td>-£14,000</td></tr>
-		  <tr class="total"><th>Total</th><th>-£14,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Client Earth</td>
+			  <td><span class="theme environment">Environmental crises</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr>
+			  <td>Construction Youth Trust</td>
+			  <td><span class="theme education">Housing</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr>
+			  <td>Into Uni</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr>
+			  <td>Khulisa</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£450,000</td>
+			</tr>
+			<tr>
+			  <td>Mental Health Foundation</td>
+			  <td><span class="theme education">Housing</span></td>
+			  <td>£300,000</td>
+			</tr>
+			<tr>
+			  <td>Nehemiah Project</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Spring Board</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£300,000</td>
+			</tr>
+			<tr>
+			  <td>The Access Project</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£525,000</td>
+			</tr>
+			<tr>
+			  <td>The Prince's Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£5,325,000</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Intermediate Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>St Catharine's College</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>-£14,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>-£14,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Discretionary grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>The Big Give</td><td>£210,000</td></tr>
-		  <tr><td>Siobhan's Trust</td><td>£10,000</td></tr>
-		  <tr><td>Catholic Parish of Seaford</td><td>£20,000</td></tr>
-		  <tr><td>Team Domenica</td><td>£20,000</td></tr>
-		  <tr><td>Mayor's Fund for London</td><td>£25,000</td></tr>
-		  <tr><td>One Small Thing</td><td>£20,000</td></tr>
-		  <tr><td>Frontline</td><td>£20,000</td></tr>
-		  <tr><td>Canine Partners</td><td>£20,000</td></tr>
-		  <tr><td>CW+</td><td>£24,000</td></tr>
-		  <tr><td>YMCA</td><td>£10,000</td></tr>
-		  <tr><td>Koestler Arts</td><td>£20,000</td></tr>
-		  <tr><td>Social Change Nest CIC (Uplift)</td><td>£20,000</td></tr>
-		  <tr><td>Mediation Surrey</td><td>£20,000</td></tr>
-		  <tr><td>Motiv8</td><td>£10,000</td></tr>
-		  <tr><td>Toynbee Hall</td><td>£20,000</td></tr>
-		  <tr><td>Cystic Fibrosis</td><td>£15,000</td></tr>
-		  <tr><td>Gateways Charity</td><td>£10,000</td></tr>
-		  <tr><td>Schoolreaders</td><td>£20,000</td></tr>
-		  <tr><td>Hampshire and IoW Air Ambulance</td><td>£15,000</td></tr>
-		  <tr><td>Society for the Relief of Distress</td><td>£10,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£539,000</th></tr>
-		</table>
-		
-		<h3>Emergency grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>The DEC Ukraine Humanitarian Appeal (via The Big Give)</td><td>£50,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£50,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Canine Partners</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Catholic Parish of Seaford</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>CW+</td>
+			  <td>£24,000</td>
+			</tr>
+			<tr>
+			  <td>Cystic Fibrosis</td>
+			  <td>£15,000</td>
+			</tr>
+			<tr>
+			  <td>Frontline</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Gateways Charity</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Hampshire and IoW Air Ambulance</td>
+			  <td>£15,000</td>
+			</tr>
+			<tr>
+			  <td>Koestler Arts</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Mayor's Fund for London</td>
+			  <td>£25,000</td>
+			</tr>
+			<tr>
+			  <td>Mediation Surrey</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Motiv8</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>One Small Thing</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Schoolreaders</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Siobhan's Trust</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Social Change Nest CIC (Uplift)</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Society for the Relief of Distress</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Team Domenica</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>The Big Give</td>
+			  <td>£210,000</td>
+			</tr>
+			<tr>
+			  <td>Toynbee Hall</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>YMCA</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£539,000</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Emergency Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>The DEC Ukraine Humanitarian Appeal (via The Big Give)</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£50,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Total grants awarded</h3>
 		<table>
@@ -453,45 +605,131 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>None</td><td>£0</td></tr>
-		  <tr class="total"><th>Total</th><th>£0</th></tr>
-		</table>
-		
-		<h3>Intermediate grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>None</td><td>£0</td></tr>
-		  <tr class="total"><th>Total</th><th>£0</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>None</td>
+			  <td>None</td>
+			  <td>£0</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£0</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Intermediate Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>None</td>
+			  <td>None</td>
+			  <td>£0</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£0</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Discretionary grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>The Big Give</td><td>£211,259</td></tr>
-		  <tr><td>Hampshire and IoW Air Ambulance</td><td>£15,000</td></tr>
-		  <tr><td>Falkland Maritime Heritage Trust</td><td>£20,000</td></tr>
-		  <tr><td>Art in Schools</td><td>£15,000</td></tr>
-		  <tr><td>Pimlico Opera</td><td>£10,000</td></tr>
-		  <tr><td>Society for the Relief of Distress</td><td>£10,000</td></tr>
-		  <tr><td>Waltham Forest Churches Night Shelter</td><td>£15,000</td></tr>
-		  <tr><td>ABF The Soldiers Charity</td><td>£20,000</td></tr>
-		  <tr><td>Addington Fund</td><td>£20,000</td></tr>
-		  <tr><td>Little Hearts Matter</td><td>£10,000</td></tr>
-		  <tr><td>Royal Marsden</td><td>£25,000</td></tr>
-		  <tr><td>Bowel Cancer UK</td><td>£25,000</td></tr>
-		  <tr><td>Doorstep Library</td><td>£20,000</td></tr>
-		  <tr><td>Royal Surrey NHS</td><td>£25,000</td></tr>
-		  <tr><td>Nehemiah</td><td>£10,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£451,259</th></tr>
-		</table>
-		
-		<h3>Emergency grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>The DEC Turkey Syria Earthquake Appeal</td><td>£50,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£50,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>ABF The Soldiers Charity</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Addington Fund</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Art in Schools</td>
+			  <td>£15,000</td>
+			</tr>
+			<tr>
+			  <td>Bowel Cancer UK</td>
+			  <td>£25,000</td>
+			</tr>
+			<tr>
+			  <td>Doorstep Library</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Falkland Maritime Heritage Trust</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Hampshire and IoW Air Ambulance</td>
+			  <td>£15,000</td>
+			</tr>
+			<tr>
+			  <td>Little Hearts Matter</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Nehemiah</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Pimlico Opera</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Marsden</td>
+			  <td>£25,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Surrey NHS</td>
+			  <td>£25,000</td>
+			</tr>
+			<tr>
+			  <td>Society for the Relief of Distress</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>The Big Give</td>
+			  <td>£211,259</td>
+			</tr>
+			<tr>
+			  <td>Waltham Forest Churches Night Shelter</td>
+			  <td>£15,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£451,259</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Emergency Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>The DEC Turkey Syria Earthquake Appeal</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£50,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Total grants awarded</h3>
 		<table>
@@ -505,52 +743,173 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>None</td><td>£0</td></tr>
-		  <tr class="total"><th>Total</th><th>£0</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>None</td>
+			  <td>None</td>
+			  <td>£0</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£0</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Intermediate grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Lady Margaret Hall</td><td>£150,000</td></tr>
-		  <tr><td>Family Lives</td><td>£150,000</td></tr>
-		  <tr><td>St Catharines</td><td>£42,287</td></tr>
-		  <tr><td>Women's Aid</td><td>£72,000</td></tr>
-		  <tr><td>Barts</td><td>£150,000</td></tr>
-		  <tr><td>Royal Brompton</td><td>£150,000</td></tr>
-		  <tr><td>Chance to Shine</td><td>£150,000</td></tr>
-		  <tr><td>Think Through Nutrition</td><td>£150,000</td></tr>
-		  <tr><td>NPC</td><td>£150,000</td></tr>
-		  <tr><td>University of Exeter, Born to Fail</td><td>£199,800</td></tr>
-		  <tr class="total"><th>Total</th><th>£1,364,087</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Barts</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Chance to Shine</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Family Lives</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Lady Margaret Hall</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>NPC</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Brompton</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Think Through Nutrition</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>University of Exeter, Born to Fail</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£199,800</td>
+			</tr>
+			<tr>
+			  <td>St Catharines</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£42,287</td>
+			</tr>
+			<tr>
+			  <td>Women's Aid</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£72,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£1,364,087</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Discretionary grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Cambridge University Land Society</td><td>£6,160</td></tr>
-		  <tr><td>The Big Give</td><td>£212,007</td></tr>
-		  <tr><td>Refugee Education UK</td><td>£70,000</td></tr>
-		  <tr><td>Toynbee Hall</td><td>£47,500</td></tr>
-		  <tr><td>Injured Jockeys</td><td>£10,000</td></tr>
-		  <tr><td>Game and Wildlife Conservation Trust</td><td>£10,000</td></tr>
-		  <tr><td>Frimley Health Charity</td><td>£10,000</td></tr>
-		  <tr><td>Lambourn Valley Housing Trust</td><td>£10,000</td></tr>
-		  <tr><td>Tullochan</td><td>£10,000</td></tr>
-		  <tr><td>Fine Cell Work</td><td>£10,000</td></tr>
-		  <tr><td>Social Change Nest CIC (Uplift)</td><td>£10,000</td></tr>
-		  <tr><td>Hampshire and IoW Air Ambulance</td><td>£10,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£415,667</th></tr>
-		</table>
-		
-		<h3>Emergency grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>The DEC Ukraine Humanitarian Appeal</td><td>£100,000</td></tr>
-		  <tr><td>Refugee Education UK (Ukraine Appeal)</td><td>£72,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£172,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Cambridge University Land Society</td>
+			  <td>£6,160</td>
+			</tr>
+			<tr>
+			  <td>Fine Cell Work</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Frimley Health Charity</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Game and Wildlife Conservation Trust</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Hampshire and IoW Air Ambulance</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Injured Jockeys</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Lambourn Valley Housing Trust</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>Refugee Education UK</td>
+			  <td>£70,000</td>
+			</tr>
+			<tr>
+			  <td>Social Change Nest CIC (Uplift)</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr>
+			  <td>The Big Give</td>
+			  <td>£212,007</td>
+			</tr>
+			<tr>
+			  <td>The Connection at St Martin-in-the-Fields</td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>Toynbee Hall</td>
+			  <td>£47,500</td>
+			</tr>
+			<tr>
+			  <td>Tullochan</td>
+			  <td>£10,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£415,667</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Emergency Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Refugee Education UK (Ukraine Appeal)</td>
+			  <td>£72,000</td>
+			</tr>
+			<tr>
+			  <td>The DEC Ukraine Humanitarian Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£172,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Total grants awarded</h3>
 		<table>
@@ -564,64 +923,210 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>RS&amp;GH</td><td>£750,000</td></tr>
-		  <tr><td>Construction Youth Trust</td><td>£900,000</td></tr>
-		  <tr><td>Mental Health Foundation</td><td>£750,000</td></tr>
-		  <tr><td>Maudsley CUES</td><td>£900,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£3,300,000</th></tr>
-		</table>
-		
-		<h3>Intermediate grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Prince's Trust</td><td>£150,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£150,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Construction Youth Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr>
+			  <td>Maudsley CUES</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£900,000</td>
+			</tr>
+			<tr>
+			  <td>Mental Health Foundation</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£750,000</td>
+			</tr>
+			<tr>
+			  <td>RS&amp;GH</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£750,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£3,300,000</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Intermediate Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Prince's Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£150,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Discretionary grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Wheelpower</td><td>£20,000</td></tr>
-		  <tr><td>Institute of Education and Helen Hamlyn Centre for Pedagogy</td><td>£50,000</td></tr>
-		  <tr><td>Doorstep Library</td><td>£20,000</td></tr>
-		  <tr><td>Think Forward</td><td>£20,000</td></tr>
-		  <tr><td>Army Benevolent Fund</td><td>£20,000</td></tr>
-		  <tr><td>St Catharine's College and Cambridge Women's Aid</td><td>£50,000</td></tr>
-		  <tr><td>Behind Every Kick</td><td>£12,000</td></tr>
-		  <tr><td>The Forward Trust</td><td>£6,470</td></tr>
-		  <tr><td>Cambridge University Land Society</td><td>£11,000</td></tr>
-		  <tr><td>Chance to Shine Foundation Ltd</td><td>£20,000</td></tr>
-		  <tr><td>The Big Give</td><td>£211,721</td></tr>
-		  <tr><td>The Literacy Pirates</td><td>£20,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£461,191</th></tr>
-		</table>
-		
-		<h3>Emergency grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Aspire - emergency appeal</td><td>£50,000</td></tr>
-		  <tr><td>Barts Charity - Covid-19 Appeal</td><td>£100,000</td></tr>
-		  <tr><td>Children's Society Emergency Appeal</td><td>£100,000</td></tr>
-		  <tr><td>Family Lives</td><td>£100,000</td></tr>
-		  <tr><td>Frimley Park</td><td>£25,000</td></tr>
-		  <tr><td>King's College Hospital Charity - Heroes Fund</td><td>£100,000</td></tr>
-		  <tr><td>Maudsley Charity - Covid-19 Appeal</td><td>£100,000</td></tr>
-		  <tr><td>MIND</td><td>£100,000</td></tr>
-		  <tr><td>The Mix</td><td>£100,000</td></tr>
-		  <tr><td>National Emergencies Trust</td><td>£100,000</td></tr>
-		  <tr><td>NHS Charities Together</td><td>£200,000</td></tr>
-		  <tr><td>Royal Brompton Hospital - Covid Appeal</td><td>£100,000</td></tr>
-		  <tr><td>Royal Free - Covid-19 Appeal</td><td>£100,000</td></tr>
-		  <tr><td>Surrey Community Foundation (Nov 18)</td><td>£50,000</td></tr>
-		  <tr><td>Trussell Trust</td><td>£100,000</td></tr>
-		  <tr><td>Women's Aid</td><td>£100,000</td></tr>
-		  <tr><td>Young Minds</td><td>£100,000</td></tr>
-		  <tr><td>St Basils</td><td>£100,000</td></tr>
-		  <tr><td>Toynbee Hall</td><td>£100,000</td></tr>
-		  <tr><td>New Philanthropy Capital</td><td>£50,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£1,875,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Army Benevolent Fund</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Behind Every Kick</td>
+			  <td>£12,000</td>
+			</tr>
+			<tr>
+			  <td>Cambridge University Land Society</td>
+			  <td>£11,000</td>
+			</tr>
+			<tr>
+			  <td>Chance to Shine Foundation Ltd</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Doorstep Library</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Institute of Education and Helen Hamlyn Centre for Pedagogy</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>St Catharine's College and Cambridge Women's Aid</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>The Big Give</td>
+			  <td>£211,721</td>
+			</tr>
+			<tr>
+			  <td>The Forward Trust</td>
+			  <td>£6,470</td>
+			</tr>
+			<tr>
+			  <td>The Literacy Pirates</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Think Forward</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr>
+			  <td>Wheelpower</td>
+			  <td>£20,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£461,191</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Emergency Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Aspire - emergency appeal</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>Barts Charity - Covid-19 Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Children's Society Emergency Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Family Lives</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Frimley Park</td>
+			  <td>£25,000</td>
+			</tr>
+			<tr>
+			  <td>King's College Hospital Charity - Heroes Fund</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Maudsley Charity - Covid-19 Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>MIND</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>National Emergencies Trust</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>New Philanthropy Capital</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>NHS Charities Together</td>
+			  <td>£200,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Brompton Hospital - Covid Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Free - Covid-19 Appeal</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>St Basils</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Surrey Community Foundation (Nov 18)</td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>The Mix</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Toynbee Hall</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Trussell Trust</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Women's Aid</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Young Minds</td>
+			  <td>£100,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th>£1,875,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Total grants awarded</h3>
 		<table>
@@ -635,33 +1140,103 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table style="margin-bottom: 1.5rem;">
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Aspire</td><td>£310,695</td></tr>
-		  <tr><td>Phyllis Tuckwell Hospice Care*</td><td>£510,632</td></tr>
-		  <tr><td>Thames Reach</td><td>£266,666</td></tr>
-		  <tr><td>The Connection at St Martin-in-the-Fields</td><td>£150,000</td></tr>
-		  <tr><td>The Sutton Trust</td><td>£1,200,000</td></tr>
-		  <tr><td>St Basil's</td><td>£312,000</td></tr>
-		  <tr><td>UK Youth</td><td>£1,283,474</td></tr>
-		  <tr class="total"><th>Total</th><th>£4,033,467</th></tr>
-		</table>
-		<p><em style="font-size: 1rem;
-			line-height: 24px;
-			display: inline-block;
-			padding: 0 1rem; margin-bottom: 2rem;">* Grant awarded to Phyllis Tuckwell Hospice Care prior to the three strategic themes being agreed. Total grant awarded of £629,632 (from 2019 and 2020) for Hospice Care.</em></p>
-		
-		<h3>Intermediate grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Central YMCA</td><td>£70,000</td></tr>
-		  <tr><td>Institute for Food, Brain and Behaviour</td><td>£100,000</td></tr>
-		  <tr><td>Kings College London / Maudsley Charity</td><td>£100,000</td></tr>
-		  <tr><td>Royal Brompton &amp; Harefield Hospitals</td><td>£100,000</td></tr>
-		  <tr><td>The Koestler Trust</td><td>£100,000</td></tr>
-		  <tr><td>Royal College of Art</td><td>£750,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£1,220,000</th></tr>
-		</table>
-		
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Aspire</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£310,695</td>
+			</tr>
+			<tr>
+			  <td>Phyllis Tuckwell Hospice Care*</td>
+			  <td><span class="theme healthcare">Healthcare</span></td>
+			  <td>£510,632</td>
+			</tr>
+			<tr>
+			  <td>St Basil's</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£312,000</td>
+			</tr>
+			<tr>
+			  <td>Thames Reach</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£266,666</td>
+			</tr>
+			<tr>
+			  <td>The Connection at St Martin-in-the-Fields</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>The Sutton Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£1,200,000</td>
+			</tr>
+			<tr>
+			  <td>UK Youth</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£1,283,474</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£4,033,467</th>
+			</tr>
+		  </table>
+		  <p>
+			<em style="font-size: 1rem; line-height: 24px; display: inline-block; padding: 0 1rem; margin-bottom: 2rem;">
+			  * Grant awarded to Phyllis Tuckwell Hospice Care prior to the three strategic themes being agreed. Total grant awarded of £629,632 (from 2019 and 2020) for Hospice Care.
+			</em>
+		  </p>
+		  
+		  <h3>Intermediate Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Central YMCA</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£70,000</td>
+			</tr>
+			<tr>
+			  <td>Institute for Food, Brain and Behaviour</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Kings College London / Maudsley Charity</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Brompton &amp; Harefield Hospitals</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£100,000</td>
+			</tr>
+			<tr>
+			  <td>Royal College of Art</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£750,000</td>
+			</tr>
+			<tr>
+			  <td>The Koestler Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£100,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£1,220,000</th>
+			</tr>
+		  </table>
+		  
+		  
 		<h3>Discretionary grants</h3>
 		<table>
 		  <tr><th>Recipient</th><th>Amount</th></tr>
@@ -693,28 +1268,97 @@ background-color: #d1c4e9a6;
 		
 		<h3>Strategic grants</h3>
 		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Aspire</td><td>£288,071</td></tr>
-		  <tr><td>Phyllis Tuckwell Hospice Care*</td><td>£119,000</td></tr>
-		  <tr><td>Thames Reach</td><td>£266,666</td></tr>
-		  <tr><td>The Connection at St Martin-in-the-Fields</td><td>£150,000</td></tr>
-		  <tr><td>The Sutton Trust</td><td>£300,000</td></tr>
-		  <tr><td>St Basil's</td><td>£312,000</td></tr>
-		  <tr><td>UK Youth</td><td>£291,997</td></tr>
-		  <tr class="total"><th>Total</th><th>£1,727,734</th></tr>
-		</table>
-		
-		<h3>Intermediate grants</h3>
-		<table>
-		  <tr><th>Recipient</th><th>Amount</th></tr>
-		  <tr><td>Central YMCA</td><td>£35,000</td></tr>
-		  <tr><td>Institute for Food, Brain and Behaviour</td><td>£50,000</td></tr>
-		  <tr><td>Kings College London / Maudsley Charity</td><td>£50,000</td></tr>
-		  <tr><td>Royal Brompton &amp; Harefield Hospitals</td><td>£50,000</td></tr>
-		  <tr><td>The Koestler Trust</td><td>£50,000</td></tr>
-		  <tr><td>Royal College of Art</td><td>£250,000</td></tr>
-		  <tr class="total"><th>Total</th><th>£485,000</th></tr>
-		</table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Aspire</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£288,071</td>
+			</tr>
+			<tr>
+			  <td>Phyllis Tuckwell Hospice Care*</td>
+			  <td><span class="theme"></span></td>
+			  <td>£119,000</td>
+			</tr>
+			<tr>
+			  <td>St Basil's</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£312,000</td>
+			</tr>
+			<tr>
+			  <td>Thames Reach</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£266,666</td>
+			</tr>
+			<tr>
+			  <td>The Connection at St Martin-in-the-Fields</td>
+			  <td><span class="theme housing">Housing</span></td>
+			  <td>£150,000</td>
+			</tr>
+			<tr>
+			  <td>The Sutton Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£300,000</td>
+			</tr>
+			<tr>
+			  <td>UK Youth</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£291,997</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£1,727,734</th>
+			</tr>
+		  </table>
+		  
+		  <h3>Intermediate Grants</h3>
+		  <table>
+			<tr>
+			  <th>Recipient</th>
+			  <th>Strategic Theme</th>
+			  <th>Amount</th>
+			</tr>
+			<tr>
+			  <td>Central YMCA</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£35,000</td>
+			</tr>
+			<tr>
+			  <td>Institute for Food, Brain and Behaviour</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>Kings College London / Maudsley Charity</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>Royal Brompton &amp; Harefield Hospitals</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£50,000</td>
+			</tr>
+			<tr>
+			  <td>Royal College of Art</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£250,000</td>
+			</tr>
+			<tr>
+			  <td>The Koestler Trust</td>
+			  <td><span class="theme education">Education</span></td>
+			  <td>£50,000</td>
+			</tr>
+			<tr class="total">
+			  <th>Total</th>
+			  <th></th>
+			  <th>£485,000</th>
+			</tr>
+		  </table>
+		  
 		
 		<h3>Discretionary grants</h3>
 		<table>
